@@ -1,0 +1,170 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Forj builds and manages your entire online presence so local businesses get found, get called, and keep growing." } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://forjahead.com');
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <title>{title}</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script src="https://tally.so/widgets/embed.js"></script>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+  <!-- Mobile CTA Bar -->
+  <div class="bg-[#2D6FE8] text-white text-center py-2 px-4 text-sm font-semibold md:hidden">
+    <a href="mailto:james@forjahead.com" class="flex items-center justify-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+      Get a Free Mockup Today
+    </a>
+  </div>
+
+  <!-- Nav -->
+  <nav class="bg-[#0A1628] text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/">
+        <img src="/logo-full-wordmark.png" alt="Forj" class="h-8 w-auto" />
+      </a>
+      <!-- Mobile menu button -->
+      <button id="menu-toggle" class="md:hidden p-2 rounded" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="/" class="hover:text-[#2D6FE8] transition-colors">Home</a>
+        <a href="/services" class="hover:text-[#2D6FE8] transition-colors">Services & Pricing</a>
+        <a href="/about" class="hover:text-[#2D6FE8] transition-colors">About</a>
+        <a href="/contact" class="hover:text-[#2D6FE8] transition-colors">Contact</a>
+        <a href="/contact" class="bg-[#2D6FE8] text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
+          Get a Free Mockup
+        </a>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0A1628] border-t border-white/10 px-4 pb-4">
+      <div class="flex flex-col gap-4 pt-4 text-sm font-medium">
+        <a href="/" class="hover:text-[#2D6FE8] transition-colors">Home</a>
+        <a href="/services" class="hover:text-[#2D6FE8] transition-colors">Services & Pricing</a>
+        <a href="/about" class="hover:text-[#2D6FE8] transition-colors">About</a>
+        <a href="/contact" class="hover:text-[#2D6FE8] transition-colors">Contact</a>
+        <a href="/contact" class="bg-[#2D6FE8] text-white px-5 py-3 rounded-lg font-semibold text-center hover:bg-blue-600 transition-colors">
+          Get a Free Mockup
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <slot />
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="bg-black text-white/60 pt-14 pb-10 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between gap-10 mb-10">
+        <!-- Wordmark + tagline -->
+        <div>
+          <a href="/" class="block">
+            <img src="/logo-full-wordmark.png" alt="Forj" class="h-8 w-auto opacity-50" />
+          </a>
+        </div>
+        <!-- Nav links -->
+        <div class="flex flex-col gap-2 text-sm">
+          <p class="text-white/30 text-xs font-semibold uppercase tracking-wider mb-1">Pages</p>
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <a href="/services" class="hover:text-white transition-colors">Services & Pricing</a>
+          <a href="/about" class="hover:text-white transition-colors">About</a>
+          <a href="/contact" class="hover:text-white transition-colors">Contact</a>
+        </div>
+        <!-- Contact -->
+        <div class="flex flex-col gap-2 text-sm">
+          <p class="text-white/30 text-xs font-semibold uppercase tracking-wider mb-1">Contact</p>
+          <a href="mailto:james@forjahead.com" class="hover:text-white transition-colors">james@forjahead.com</a>
+          <span>Washington, DC</span>
+          <span>Serving DC · NoVA · Maryland</span>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 text-xs text-white/30">
+        © {new Date().getFullYear()} Forj. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    toggle?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+
+    // Formspree form submission
+    // Sign up at formspree.io, create a form pointed at james@forjahead.com,
+    // then replace PASTE_YOUR_FORMSPREE_ID below with the form ID (e.g. xpwzabcd)
+    const FORMSPREE_ID = 'PASTE_YOUR_FORMSPREE_ID';
+    const FORMSPREE_URL = `https://formspree.io/f/${FORMSPREE_ID}`;
+
+    async function submitForm(form: HTMLFormElement, statusEl: HTMLElement) {
+      const data = new FormData(form);
+      statusEl.textContent = 'Sending…';
+      statusEl.className = 'text-center text-sm text-white/40';
+
+      try {
+        const res = await fetch(FORMSPREE_URL, {
+          method: 'POST',
+          body: data,
+          headers: { Accept: 'application/json' },
+        });
+
+        if (res.ok) {
+          form.reset();
+          statusEl.textContent = "✓ Got it! We'll be in touch within 1 business day.";
+          statusEl.classList.add('text-green-400');
+          setTimeout(() => { window.location.href = '/thank-you'; }, 1200);
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch {
+        statusEl.textContent = 'Something went wrong — please email james@forjahead.com directly.';
+        statusEl.classList.add('text-red-400');
+      }
+    }
+
+    // Layout footer form
+    const layoutForm = document.getElementById('layout-contact-form') as HTMLFormElement | null;
+    const layoutStatus = document.getElementById('lf-status') as HTMLElement | null;
+    layoutForm?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (layoutStatus) await submitForm(layoutForm, layoutStatus);
+    });
+
+    // Contact page form (if present)
+    const contactForm = document.getElementById('main-contact-form') as HTMLFormElement | null;
+    const contactStatus = document.getElementById('cf-status') as HTMLElement | null;
+    contactForm?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (contactStatus) await submitForm(contactForm, contactStatus);
+    });
+  </script>
+</body>
+</html>

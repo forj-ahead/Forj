@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="About Forj — Your Online Presence, Handled"
+  description="Forj is a Washington DC web agency helping local service businesses get found online. Done-for-you websites, SEO, and Google management."
+>
+
+  <!-- Header -->
+  <section class="bg-[#0A1628] text-white py-16 md:py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-black mb-4">About Forj</h1>
+      <p class="text-white/70 text-lg">Your online presence, handled.</p>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section class="py-20 px-4 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <div class="prose prose-lg max-w-none text-gray-600 leading-relaxed space-y-6">
+        <p class="text-2xl font-black text-[#0A1628] leading-snug">
+          Local businesses deserve a real online presence — not a DIY website they built at midnight or a Yelp page they forgot to update.
+        </p>
+        <p>
+          Forj was built for the roofer who's too busy on the job to manage Google reviews. The HVAC company that knows they need a better website but doesn't know where to start. The landscaper who's losing jobs to competitors who show up first on Google.
+        </p>
+        <p>
+          We handle everything — your website, your Google Business Profile, your local SEO, your reviews, your ads. You get one monthly invoice and one team that knows your business. You focus on the work. We make sure customers can find you.
+        </p>
+        <p>
+          We're based in Washington, DC and work exclusively with local service businesses in the DC metro area — Northern Virginia and Maryland included. We know this market. We know what customers here are searching for. And we know how to make sure you show up.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="py-20 px-4 bg-gray-50">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-black text-[#0A1628] mb-12 text-center">How we work</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        {[
+          {
+            title: "Done-for-you, not DIY",
+            desc: "We don't hand you a login and wish you luck. We set everything up, keep it running, and handle the ongoing work so you don't have to."
+          },
+          {
+            title: "Transparent pricing",
+            desc: "One monthly fee. No surprise bills. No upsells you didn't ask for. You always know exactly what you're paying and what you're getting."
+          },
+          {
+            title: "Results over jargon",
+            desc: "We don't talk about 'digital ecosystems' or 'synergies.' We talk about calls, leads, and customers. That's what matters."
+          },
+          {
+            title: "No lock-in",
+            desc: "Month-to-month contracts. You own your domain and your content. We earn your business every month, not once."
+          },
+          {
+            title: "Local focus",
+            desc: "We only work with DC metro businesses. That means we know your market, your competition, and what it takes to rank locally."
+          },
+          {
+            title: "Real support",
+            desc: "You get a real person, not a ticket queue. Fast response times and someone who actually knows your account."
+          }
+        ].map(item => (
+          <div class="bg-white rounded-2xl p-7 shadow-sm">
+            <h3 class="text-xl font-bold text-[#0A1628] mb-2">{item.title}</h3>
+            <p class="text-gray-500 leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[#0A1628] text-white py-16 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-black mb-4">Let's build your online presence.</h2>
+      <p class="text-white/80 text-lg mb-8">Start with a free mockup — no commitment, no credit card.</p>
+      <a href="/contact" class="inline-block bg-[#2D6FE8] text-white font-black text-lg px-10 py-4 rounded-lg hover:bg-blue-600 transition-colors shadow-xl">
+        Get My Free Mockup →
+      </a>
+    </div>
+  </section>
+
+</Layout>

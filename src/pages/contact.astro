@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contact Forj — Get a Free Website Mockup"
+  description="Request your free website mockup from Forj. No credit card, no commitment. We'll build it and show you exactly what your new site will look like."
+>
+
+  <!-- Header -->
+  <section class="bg-[#0A1628] text-white py-16 md:py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-black mb-4">Get a Free Mockup</h1>
+      <p class="text-white/70 text-lg">Tell us about your business. We'll build a free preview of your new site — no credit card, no commitment.</p>
+    </div>
+  </section>
+
+  <!-- Contact section -->
+  <section class="py-20 px-4 bg-white">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+
+      <!-- Left: Form -->
+      <div>
+        <h2 class="text-2xl font-black text-[#0A1628] mb-2">Request your free mockup</h2>
+        <p class="text-gray-500 mb-8">We'll get back to you within 1 business day.</p>
+
+        <iframe
+          data-tally-src="https://tally.so/embed/jaE6L6?alignLeft=1&hideTitle=1&dynamicHeight=1"
+          loading="lazy"
+          width="100%"
+          height="400"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+        ></iframe>
+      </div>
+
+      <!-- Right: Why us + contact info -->
+      <div class="space-y-8">
+        <div class="bg-gray-50 rounded-2xl p-8">
+          <h3 class="text-xl font-black text-[#0A1628] mb-6">What happens next</h3>
+          <ol class="space-y-5">
+            {[
+              { n: "1", title: "We review your submission", desc: "We'll take a look at your current online presence and your industry." },
+              { n: "2", title: "We build your free mockup", desc: "A real preview of what your new website will look like — not a template." },
+              { n: "3", title: "We walk you through it", desc: "A quick call or email walkthrough. No pressure, no hard sell." },
+              { n: "4", title: "You decide", desc: "If you love it and want to move forward, great. If not, no worries — the mockup is yours to keep." },
+            ].map(step => (
+              <li class="flex gap-4">
+                <span class="bg-[#2D6FE8] text-white text-sm font-black w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">{step.n}</span>
+                <div>
+                  <p class="font-bold text-[#0A1628]">{step.title}</p>
+                  <p class="text-gray-500 text-sm">{step.desc}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        <div class="bg-[#0A1628] rounded-2xl p-8 text-white">
+          <h3 class="text-xl font-black mb-6">Get in touch directly</h3>
+          <div class="space-y-4">
+            <a href="mailto:james@forjahead.com" class="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#2D6FE8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              james@forjahead.com
+            </a>
+            <div class="flex items-center gap-3 text-white/80">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#2D6FE8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              Washington, DC
+            </div>
+            <div class="flex items-center gap-3 text-white/60 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#2D6FE8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Serving DC, Northern Virginia & Maryland
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</Layout>
