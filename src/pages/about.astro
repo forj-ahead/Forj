@@ -3,67 +3,64 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-  title="About Forj — Your Online Presence, Handled"
-  description="Forj helps local service businesses get found online. Done-for-you websites, SEO, and Google management."
+  title="About Forj — AI Call Answering for Small Businesses"
+  description="Forj builds AI receptionists for local service businesses. Answer every call, qualify every lead, and never lose a customer to voicemail again."
 >
 
-  <!-- Header -->
   <section class="bg-[#0A1628] text-white py-16 md:py-20 px-4">
     <div class="max-w-3xl mx-auto text-center">
       <h1 class="text-4xl md:text-5xl font-black mb-4">About Forj</h1>
-      <p class="text-white/70 text-lg">Your online presence, handled.</p>
+      <p class="text-white/70 text-lg">Built for the business owner who's too busy to answer every call.</p>
     </div>
   </section>
 
-  <!-- Story -->
   <section class="py-20 px-4 bg-white">
     <div class="max-w-3xl mx-auto">
       <div class="prose prose-lg max-w-none text-gray-600 leading-relaxed space-y-6">
         <p class="text-2xl font-black text-[#0A1628] leading-snug">
-          Local businesses deserve a real online presence — not a DIY website they built at midnight or a Yelp page they forgot to update.
+          Every missed call is a lead going to your competitor.
         </p>
         <p>
-          Forj was built for the roofer who's too busy on the job to manage Google reviews. The HVAC company that knows they need a better website but doesn't know where to start. The landscaper who's losing jobs to competitors who show up first on Google.
+          Forj was built for the landscaper on a job site who can't answer the phone. The roofer whose voicemail is full. The plumber who calls back at 6pm and the customer has already hired someone else.
         </p>
         <p>
-          We handle everything — your website, your Google Business Profile, your local SEO, your reviews, your ads. You get one monthly invoice and one team that knows your business. You focus on the work. We make sure customers can find you.
+          Your AI receptionist answers every call, figures out what the customer needs, and scores the lead so you know exactly who's worth calling back — and who isn't. You get a dashboard with every caller's name, number, what they need, and a score from 1 to 10.
         </p>
         <p>
-          We work with local service businesses across the country. We know what customers are searching for in your area, and we know how to make sure you show up.
+          One flat fee. Unlimited calls. No long-term contracts. You focus on the work — we make sure no lead slips through.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Values -->
   <section class="py-20 px-4 bg-gray-50">
     <div class="max-w-5xl mx-auto">
       <h2 class="text-3xl font-black text-[#0A1628] mb-12 text-center">How we work</h2>
       <div class="grid md:grid-cols-2 gap-8">
         {[
           {
-            title: "Done-for-you, not DIY",
-            desc: "We don't hand you a login and wish you luck. We set everything up, keep it running, and handle the ongoing work so you don't have to."
+            title: "Set up once, runs forever",
+            desc: "We configure your AI script, set up your phone number, and get your dashboard ready. After that, it just works — no maintenance, no tinkering required."
           },
           {
-            title: "Transparent pricing",
-            desc: "One monthly fee. No surprise bills. No upsells you didn't ask for. You always know exactly what you're paying and what you're getting."
+            title: "Flat pricing, no surprises",
+            desc: "$199/month. No per-call fees. No tiers. No nickel-and-diming. Your bill is the same whether you get 10 calls or 500."
           },
           {
-            title: "Results over jargon",
-            desc: "We don't talk about 'digital ecosystems' or 'synergies.' We talk about calls, leads, and customers. That's what matters."
+            title: "Built around your business",
+            desc: "Your AI knows what services you offer, what you don't, and what makes a good lead for you specifically. Not a generic answering service."
           },
           {
             title: "No lock-in",
-            desc: "Month-to-month contracts. You own your domain and your content. We earn your business every month, not once."
+            desc: "Month-to-month contracts. Cancel with 30 days notice. We earn your business every month because it works — not because you're stuck."
           },
           {
-            title: "Local focus",
-            desc: "We specialize in local service businesses. That means we know your market, your competition, and what it takes to rank in your area."
+            title: "Real results you can see",
+            desc: "Monthly reports show calls answered, leads generated, and how many you've converted. Know exactly what you're getting for your $199."
           },
           {
             title: "Real support",
-            desc: "You get a real person, not a ticket queue. Fast response times and someone who actually knows your account."
+            desc: "You get a real person when you need help. Not a ticket queue. Fast responses and someone who actually knows your setup."
           }
         ].map(item => (
           <div class="bg-white rounded-2xl p-7 shadow-sm">
@@ -75,13 +72,12 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="bg-[#0A1628] text-white py-16 px-4">
     <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-black mb-4">Let's build your online presence.</h2>
-      <p class="text-white/80 text-lg mb-8">Start with a free mockup — no commitment, no credit card.</p>
-      <a href="/contact" class="inline-block bg-[#2D6FE8] text-white font-black text-lg px-10 py-4 rounded-lg hover:bg-blue-600 hover:ring-2 hover:ring-[#2D6FE8] transition-all shadow-xl">
-        Get My Free Mockup →
+      <h2 class="text-3xl md:text-4xl font-black mb-4">Never miss a qualified lead again.</h2>
+      <p class="text-white/70 text-lg mb-8">$199/month. Setup in days. No contracts.</p>
+      <a href="/contact" class="inline-block bg-[#2D6FE8] text-white font-black text-lg px-10 py-4 rounded-xl hover:bg-blue-600 hover:ring-2 hover:ring-[#2D6FE8] transition-all shadow-xl">
+        Get Started →
       </a>
     </div>
   </section>

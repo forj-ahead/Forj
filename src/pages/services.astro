@@ -1,136 +1,65 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-const plans = [
-  {
-    name: "Starter",
-    price: "$179",
-    setup: "$500",
-    tagline: "Get a real website that works.",
-    highlight: false,
-    features: [
-      "Custom website design (up to 5 pages)",
-      "Mobile-first, fast-loading",
-      "Hosting & ongoing maintenance",
-      "SSL certificate & security",
-      "Basic on-page SEO",
-      "Contact form",
-      "Click-to-call button",
-      "Google Analytics setup",
-    ],
-    notIncluded: [
-      "Google Business Profile management",
-      "Review management",
-      "Google Ads",
-      "Monthly reporting dashboard",
-    ]
-  },
-  {
-    name: "Growth",
-    price: "$399",
-    setup: "$750",
-    tagline: "Get found. Get reviewed. Get called.",
-    highlight: true,
-    features: [
-      "Everything in Starter",
-      "Google Business Profile setup & management",
-      "Local SEO optimization",
-      "Citation building & cleanup",
-      "Review request automation",
-      "Review monitoring & responses",
-      "Monthly performance report",
-      "Priority support",
-    ],
-    notIncluded: [
-      "Google Ads management",
-      "Paid ad spend (your budget)",
-    ]
-  },
-  {
-    name: "Pro",
-    price: "$799",
-    setup: "$1,000",
-    tagline: "Full-stack growth engine for serious businesses.",
-    highlight: false,
-    dark: true,
-    features: [
-      "Everything in Growth",
-      "Google Ads campaign setup & management",
-      "Monthly ad strategy & optimization",
-      "Review automation & follow-up sequences",
-      "Detailed monthly dashboard",
-      "Competitor tracking",
-      "Dedicated account manager",
-      "Quarterly strategy calls",
-    ],
-    notIncluded: [
-      "Ad spend budget (your budget, billed directly by Google)",
-    ]
-  }
-];
 ---
 
 <Layout
-  title="Services & Pricing — Forj"
-  description="Forj's done-for-you web presence plans for local service businesses. Starting at $179/mo."
+  title="Pricing — Forj"
+  description="One flat price. AI call answering, lead scoring, and a full dashboard. $199/month, no contracts."
 >
 
   <!-- Header -->
   <section class="bg-[#0A1628] text-white py-16 md:py-20 px-4">
     <div class="max-w-3xl mx-auto text-center">
-      <h1 class="text-4xl md:text-5xl font-black mb-4">Services & Pricing</h1>
-      <p class="text-white/70 text-lg">Straightforward plans. No hidden fees. Cancel anytime.</p>
+      <h1 class="text-4xl md:text-5xl font-black mb-4">Simple Pricing</h1>
+      <p class="text-white/70 text-lg">One plan. Everything included. No per-call fees, no contracts.</p>
     </div>
   </section>
 
-  <!-- Plans -->
+  <!-- Pricing -->
   <section class="py-20 px-4 bg-white">
-    <div class="max-w-5xl mx-auto">
-      <div class="grid md:grid-cols-3 gap-8 items-start">
-        {plans.map(plan => (
-          <div class={`rounded-2xl p-8 relative ${plan.highlight ? 'border-2 border-[#2D6FE8] shadow-2xl' : plan.dark ? 'bg-[#0A1628] text-white border border-gray-200' : 'border border-gray-200'}`}>
-            {plan.highlight && (
-              <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#2D6FE8] text-white text-xs font-black px-4 py-1 rounded-full">MOST POPULAR</span>
-            )}
-            <p class={`text-sm font-semibold uppercase tracking-wider mb-2 ${plan.highlight ? 'text-[#2D6FE8]' : plan.dark ? 'text-white/50' : 'text-gray-400'}`}>{plan.name}</p>
-            <p class={`text-4xl font-black mb-1 ${plan.dark ? 'text-white' : 'text-[#0A1628]'}`}>{plan.price}<span class={`text-lg font-normal ${plan.dark ? 'text-white/50' : 'text-gray-400'}`}>/mo</span></p>
-            <p class={`text-sm mb-1 ${plan.dark ? 'text-white/40' : 'text-gray-400'}`}>+ {plan.setup} one-time setup</p>
-            <p class={`text-sm mb-7 font-medium ${plan.dark ? 'text-white/70' : 'text-gray-500'}`}>{plan.tagline}</p>
+    <div class="max-w-lg mx-auto">
+      <div class="border-2 border-[#2D6FE8] rounded-2xl p-10 shadow-2xl">
+        <p class="text-sm font-semibold text-[#2D6FE8] uppercase tracking-wider mb-3">Everything included</p>
+        <p class="text-5xl font-black text-[#0A1628] mb-1">$199<span class="text-2xl font-normal text-gray-400">/mo</span></p>
+        <p class="text-gray-400 text-sm mb-2">No setup fee. No contracts. Cancel anytime.</p>
+        <p class="text-gray-500 text-sm font-medium mb-10">Less than $7 a day to never miss a qualified lead.</p>
 
-            <div class="mb-6">
-              <p class={`text-xs font-bold uppercase tracking-wider mb-3 ${plan.dark ? 'text-white/40' : 'text-gray-400'}`}>What's included</p>
-              <ul class="space-y-2.5">
-                {plan.features.map(f => (
-                  <li class={`flex gap-2.5 text-sm ${plan.dark ? 'text-white/80' : 'text-gray-600'}`}>
-                    <span class="text-[#2D6FE8] font-bold mt-0.5">✓</span>
-                    {f}
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <div class="mb-8">
+          <p class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-4">What's included</p>
+          <ul class="space-y-3">
+            {[
+              ["AI receptionist answers every inbound call", "Picks up 24/7 — nights, weekends, and when you're on the job."],
+              ["Unlimited calls", "No per-call charges. No monthly caps. Volume spikes don't change your bill."],
+              ["Lead scoring 1–10", "Every caller is scored based on fit, urgency, and service match."],
+              ["Full call transcripts", "Read exactly what was said on every call."],
+              ["Lead summaries", "AI writes a one-paragraph summary of what each customer needs."],
+              ["Lead management dashboard", "Track every lead — new, contacted, closed, or disqualified — in one place."],
+              ["Status tracking with urgency alerts", "See how long new leads have been waiting. Red flags leads going cold."],
+              ["CSV export", "Export your leads anytime for reporting or CRM import."],
+              ["Instant SMS alerts for hot leads", "Get a text when a 8+ score lead calls in."],
+              ["Custom AI script", "Your AI is trained on your services, pricing, and what to qualify for."],
+              ["Named AI receptionist", "Give your AI a name that fits your brand."],
+              ["Monthly performance report", "Calls answered, leads generated, close rate, and more — exportable to PDF."],
+            ].map(([title, desc]) => (
+              <li class="flex gap-3">
+                <span class="text-[#2D6FE8] font-bold mt-0.5 flex-shrink-0">✓</span>
+                <div>
+                  <span class="text-gray-800 font-semibold text-sm">{title}</span>
+                  <span class="text-gray-400 text-sm"> — {desc}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-            {plan.notIncluded && plan.notIncluded.length > 0 && (
-              <div class="mb-8">
-                <p class={`text-xs font-bold uppercase tracking-wider mb-3 ${plan.dark ? 'text-white/30' : 'text-gray-300'}`}>Not included</p>
-                <ul class="space-y-2">
-                  {plan.notIncluded.map(f => (
-                    <li class={`flex gap-2.5 text-sm ${plan.dark ? 'text-white/30' : 'text-gray-300'}`}>
-                      <span>—</span>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            <a href="/contact" class={`block text-center font-bold py-3 rounded-lg transition-colors ${plan.highlight ? 'bg-[#2D6FE8] text-white hover:bg-blue-600' : plan.dark ? 'border-2 border-white/30 text-white hover:bg-white/10' : 'border-2 border-[#0A1628] text-[#0A1628] hover:bg-[#0A1628] hover:text-white'}`}>
-              Get Started
-            </a>
-          </div>
-        ))}
+        <a href="/contact" class="block text-center bg-[#2D6FE8] text-white font-black text-lg py-4 rounded-xl hover:bg-blue-600 transition-colors shadow-xl">
+          Get Started →
+        </a>
       </div>
 
-      <p class="text-center text-gray-400 text-sm mt-10">All plans include a free website mockup before you commit. No credit card required.</p>
+      <p class="text-center text-gray-400 text-sm mt-8">
+        Questions? Email <a href="mailto:james@forjahead.com" class="text-[#2D6FE8] hover:underline">james@forjahead.com</a>
+      </p>
     </div>
   </section>
 
@@ -138,32 +67,36 @@ const plans = [
   <section class="py-20 px-4 bg-gray-50">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-3xl font-black text-[#0A1628] mb-10 text-center">Common Questions</h2>
-      <div class="space-y-6">
+      <div class="space-y-5">
         {[
           {
-            q: "Is there a long-term contract?",
-            a: "No. All plans are month-to-month. You can cancel anytime with 30 days notice. We keep clients because our work delivers results, not because we trap them in contracts."
+            q: "How does the AI answer my calls?",
+            a: "You either forward your existing number to your Forj AI number, or use the Forj number directly. The AI picks up, introduces itself by name, and starts the conversation. You set what it asks and what counts as a qualified lead."
           },
           {
-            q: "How fast can my site go live?",
-            a: "Typically 10–14 business days from the time you provide your information and approve your mockup."
+            q: "Can I keep my existing phone number?",
+            a: "Yes. The simplest setup is call forwarding on no answer — so your phone rings first, and if you don't pick up, the AI takes the call. You can also forward all calls if you prefer."
           },
           {
-            q: "What do I need to provide?",
-            a: "Your business info, a logo (or we can help you get one), some photos if you have them, and answers to a short intake form. We handle everything else."
+            q: "Why is pricing flat instead of per-call?",
+            a: "Per-call pricing creates anxiety — you're always thinking about whether it's worth letting the AI answer. A flat fee means you never have to think about it. Answer every call, always."
           },
           {
-            q: "Do I own my website?",
-            a: "Yes. You own your domain and all your content. If you ever cancel, you can take your site with you."
+            q: "How is the lead score calculated?",
+            a: "Your AI is trained on your services, the areas you cover, and any services you don't offer. It scores callers based on how well they match what you do and how ready they are to hire."
           },
           {
-            q: "What's included in 'Google Ads management'?",
-            a: "We set up and manage your Google Ads campaigns — keyword research, ad copy, targeting, and monthly optimization. Your ad budget is separate and paid directly to Google."
+            q: "How long does setup take?",
+            a: "Usually a few days. We configure your AI script, set up your phone number, and get you access to your dashboard. No technical knowledge required on your end."
           },
           {
-            q: "Do you work with businesses outside my area?",
-            a: "Yes — we work with local service businesses anywhere. As long as you rely on customers finding you online, we can help."
-          }
+            q: "Is there a contract?",
+            a: "No. Month-to-month. Cancel anytime with 30 days notice. We keep clients because it works, not because we trap them."
+          },
+          {
+            q: "What if a caller wants to speak to a real person?",
+            a: "Your AI can transfer the call or take a message — you control how it handles that. Most callers don't ask; they just want their question answered."
+          },
         ].map(item => (
           <div class="bg-white rounded-xl p-6 shadow-sm">
             <h3 class="font-bold text-[#0A1628] text-lg mb-2">{item.q}</h3>
@@ -177,10 +110,10 @@ const plans = [
   <!-- CTA -->
   <section class="bg-[#0A1628] text-white py-16 px-4">
     <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-black mb-4">Not sure which plan is right?</h2>
-      <p class="text-white/80 text-lg mb-8">Tell us about your business and we'll recommend the right fit — no pressure.</p>
-      <a href="/contact" class="inline-block bg-[#2D6FE8] text-white font-black text-lg px-10 py-4 rounded-lg hover:bg-blue-600 hover:ring-2 hover:ring-[#2D6FE8] transition-all shadow-xl">
-        Get a Free Mockup →
+      <h2 class="text-3xl md:text-4xl font-black mb-4">Ready to stop missing leads?</h2>
+      <p class="text-white/70 text-lg mb-8">Get set up in days. $199/month. No contracts.</p>
+      <a href="/contact" class="inline-block bg-[#2D6FE8] text-white font-black text-lg px-10 py-4 rounded-xl hover:bg-blue-600 hover:ring-2 hover:ring-[#2D6FE8] transition-all shadow-xl">
+        Get Started →
       </a>
     </div>
   </section>
