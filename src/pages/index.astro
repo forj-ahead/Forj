@@ -45,7 +45,7 @@ const industries = ["Roofers","HVAC","Landscapers","Plumbers","Electricians","Mo
           </div>
         </div>
 
-        <!-- Right: Animated dashboard -->
+        <!-- Right: Browser mockup -->
         <div class="md:w-1/2 flex items-end justify-center md:justify-end">
           <div class="w-full max-w-lg">
             <!-- Browser chrome -->
@@ -56,67 +56,48 @@ const industries = ["Roofers","HVAC","Landscapers","Plumbers","Electricians","Mo
                 <div class="w-3 h-3 rounded-full bg-green-400/70"></div>
               </div>
               <div class="flex-1 mx-3 bg-white/10 rounded-md px-3 py-1 text-xs text-white/40 font-mono">
-                app.forjahead.com/dashboard
+                acmeroofing.com
               </div>
             </div>
-            <!-- Dashboard content -->
-            <div class="bg-[#0b1120] rounded-b-xl overflow-hidden shadow-2xl border border-white/10 border-t-0">
-              <!-- App nav -->
-              <div class="bg-[#080e1a] px-4 py-2.5 flex items-center justify-between border-b border-white/5">
-                <div class="text-white font-black text-xs tracking-wide">Forj</div>
-                <div class="flex gap-3 text-white/30 text-xs">
-                  <span class="text-white/60">Leads</span><span>Calls</span><span>Reports</span>
+            <!-- Browser content -->
+            <div class="bg-white rounded-b-xl overflow-hidden shadow-2xl border border-white/10 border-t-0">
+              <!-- Mock site nav -->
+              <div class="bg-[#0A1628] px-5 py-3 flex items-center justify-between">
+                <div class="text-white font-black text-sm">ACME ROOFING</div>
+                <div class="hidden sm:flex gap-4 text-white/60 text-xs">
+                  <span>Services</span><span>About</span><span>Contact</span>
                 </div>
-                <div id="alert-dot" class="w-2 h-2 rounded-full bg-blue-400 opacity-0"></div>
+                <div class="bg-[#2D6FE8] text-white text-xs font-bold px-3 py-1.5 rounded">Call Now</div>
               </div>
-              <!-- Stats row -->
-              <div class="grid grid-cols-3 gap-2 px-4 pt-3 pb-2">
-                <div class="bg-[#111827] rounded-lg p-2.5 text-center">
-                  <div class="text-white font-black text-lg leading-none" id="stat-calls">12</div>
-                  <div class="text-white/30 text-[10px] mt-0.5">calls today</div>
-                </div>
-                <div class="bg-[#111827] rounded-lg p-2.5 text-center">
-                  <div class="text-green-400 font-black text-lg leading-none" id="stat-qualified">7</div>
-                  <div class="text-white/30 text-[10px] mt-0.5">qualified</div>
-                </div>
-                <div class="bg-[#111827] rounded-lg p-2.5 text-center">
-                  <div class="text-blue-400 font-black text-lg leading-none">8.4</div>
-                  <div class="text-white/30 text-[10px] mt-0.5">avg score</div>
+              <!-- Mock hero -->
+              <div class="bg-gradient-to-br from-slate-700 to-slate-900 px-6 py-8 text-white">
+                <div class="text-xs text-white/50 uppercase tracking-widest mb-2">Trusted Local Roofer</div>
+                <div class="text-xl font-black mb-2 leading-tight">Licensed, Insured &<br />Ready to Help</div>
+                <div class="text-white/60 text-xs mb-4">Family-owned. Fully insured. Since 2008.</div>
+                <div class="flex gap-2">
+                  <div class="bg-[#2D6FE8] text-white text-xs font-bold px-4 py-2 rounded">Free Estimate</div>
+                  <div class="border border-white/30 text-white text-xs px-4 py-2 rounded">Our Work</div>
                 </div>
               </div>
-              <!-- Lead feed -->
-              <div class="px-4 pb-3 space-y-1.5" id="lead-feed">
-                <div class="text-white/20 text-[10px] uppercase tracking-widest mb-2 mt-1">Recent Leads</div>
-                <!-- Static leads -->
-                <div class="bg-[#111827] rounded-lg px-3 py-2 flex items-center justify-between">
-                  <div>
-                    <div class="text-white text-xs font-semibold">Mike T. · Roof repair quote</div>
-                    <div class="text-white/30 text-[10px]">2 min ago · contacted</div>
-                  </div>
-                  <div class="bg-green-500/20 text-green-400 text-[10px] font-black px-2 py-0.5 rounded-full">9</div>
+              <!-- Mock services -->
+              <div class="bg-gray-50 px-6 py-5">
+                <div class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Our Services</div>
+                <div class="grid grid-cols-3 gap-2">
+                  {["Roof Repair","New Roofs","Gutters"].map(s => (
+                    <div class="bg-white rounded-lg p-3 text-center shadow-sm border border-gray-100">
+                      <div class="text-lg mb-1">🏠</div>
+                      <div class="text-xs font-semibold text-gray-700">{s}</div>
+                    </div>
+                  ))}
                 </div>
-                <div class="bg-[#111827] rounded-lg px-3 py-2 flex items-center justify-between">
-                  <div>
-                    <div class="text-white text-xs font-semibold">Sarah K. · HVAC inspection</div>
-                    <div class="text-white/30 text-[10px]">18 min ago · new</div>
-                  </div>
-                  <div class="bg-green-500/20 text-green-400 text-[10px] font-black px-2 py-0.5 rounded-full">8</div>
+              </div>
+              <!-- Mock reviews -->
+              <div class="bg-white px-6 py-4 border-t border-gray-100">
+                <div class="flex items-center gap-2 mb-2">
+                  <div class="text-yellow-400 text-sm">★★★★★</div>
+                  <div class="text-xs font-bold text-gray-700">4.9 · 127 reviews</div>
                 </div>
-                <div class="bg-[#111827] rounded-lg px-3 py-2 flex items-center justify-between">
-                  <div>
-                    <div class="text-white text-xs font-semibold">James R. · Landscaping estimate</div>
-                    <div class="text-white/30 text-[10px]">41 min ago · contacted</div>
-                  </div>
-                  <div class="bg-yellow-500/20 text-yellow-400 text-[10px] font-black px-2 py-0.5 rounded-full">6</div>
-                </div>
-                <!-- Animated new lead (hidden initially) -->
-                <div id="new-lead" class="bg-[#1a2a44] border border-blue-500/40 rounded-lg px-3 py-2 flex items-center justify-between opacity-0 translate-y-2 transition-all duration-500">
-                  <div>
-                    <div class="text-white text-xs font-semibold">David L. · Plumbing emergency</div>
-                    <div class="text-blue-400 text-[10px] font-semibold">Just now · 🔥 Hot lead</div>
-                  </div>
-                  <div class="bg-green-500/30 text-green-300 text-[10px] font-black px-2 py-0.5 rounded-full">10</div>
-                </div>
+                <div class="text-xs text-gray-400 italic">"Best roofer in DC. Fast, clean, and fairly priced."</div>
               </div>
             </div>
             <!-- Glow effect -->
@@ -207,44 +188,4 @@ const industries = ["Roofers","HVAC","Landscapers","Plumbers","Electricians","Mo
   </section>
 
 
-
-<style>
-  @keyframes pulse-dot {
-    0%, 100% { opacity: 0; }
-    50% { opacity: 1; }
-  }
-  #alert-dot.active {
-    animation: pulse-dot 1s ease-in-out infinite;
-  }
-  #new-lead.visible {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-  }
-</style>
-
-<script is:inline>
-  (function() {
-    function runAnimation() {
-      var dot = document.getElementById('alert-dot');
-      var newLead = document.getElementById('new-lead');
-      var statCalls = document.getElementById('stat-calls');
-      var statQualified = document.getElementById('stat-qualified');
-      if (!dot || !newLead) return;
-      setTimeout(function() {
-        dot.classList.add('active');
-        newLead.classList.add('visible');
-        if (statCalls) statCalls.textContent = '13';
-        if (statQualified) statQualified.textContent = '8';
-      }, 2500);
-      setTimeout(function() {
-        dot.classList.remove('active');
-        newLead.classList.remove('visible');
-        if (statCalls) statCalls.textContent = '12';
-        if (statQualified) statQualified.textContent = '7';
-        setTimeout(runAnimation, 1500);
-      }, 6000);
-    }
-    setTimeout(runAnimation, 1000);
-  })();
-</script>
 </Layout>
