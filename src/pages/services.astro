@@ -1,136 +1,69 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const plans = [
-  {
-    name: "Starter",
-    price: "$179",
-    setup: "$500",
-    tagline: "Get a real website that works.",
-    highlight: false,
-    features: [
-      "Custom website design (up to 5 pages)",
-      "Mobile-first, fast-loading",
-      "Hosting & ongoing maintenance",
-      "SSL certificate & security",
-      "Basic on-page SEO",
-      "Contact form",
-      "Click-to-call button",
-      "Google Analytics setup",
-    ],
-    notIncluded: [
-      "Google Business Profile management",
-      "Review management",
-      "Google Ads",
-      "Monthly reporting dashboard",
-    ]
-  },
-  {
-    name: "Growth",
-    price: "$399",
-    setup: "$750",
-    tagline: "Get found. Get reviewed. Get called.",
-    highlight: true,
-    features: [
-      "Everything in Starter",
-      "Google Business Profile setup & management",
-      "Local SEO optimization",
-      "Citation building & cleanup",
-      "Review request automation",
-      "Review monitoring & responses",
-      "Monthly performance report",
-      "Priority support",
-    ],
-    notIncluded: [
-      "Google Ads management",
-      "Paid ad spend (your budget)",
-    ]
-  },
-  {
-    name: "Pro",
-    price: "$799",
-    setup: "$1,000",
-    tagline: "Full-stack growth engine for serious businesses.",
-    highlight: false,
-    dark: true,
-    features: [
-      "Everything in Growth",
-      "Google Ads campaign setup & management",
-      "Monthly ad strategy & optimization",
-      "Review automation & follow-up sequences",
-      "Detailed monthly dashboard",
-      "Competitor tracking",
-      "Dedicated account manager",
-      "Quarterly strategy calls",
-    ],
-    notIncluded: [
-      "Ad spend budget (your budget, billed directly by Google)",
-    ]
-  }
-];
+const plan = {
+  name: "Full Access",
+  price: "$199",
+  tagline: "Everything you need. Nothing you don't.",
+  highlight: true,
+  features: [
+    "AI agent answers every call, 24/7",
+    "Real-time lead qualification & scoring",
+    "Instant alerts when a hot lead comes in",
+    "Full lead dashboard with call transcripts",
+    "Lead notes, status tracking, and pipeline",
+    "CSV export for your leads",
+    "Monthly performance reports (PDF export)",
+    "Unlimited calls — flat rate, no per-call fees",
+    "Custom AI agent name & script for your business",
+    "Dedicated setup and onboarding support",
+  ],
+};
 ---
 
 <Layout
-  title="Services & Pricing — Forj"
-  description="Forj's done-for-you web presence plans for local service businesses. Starting at $179/mo."
+  title="Pricing — Forj"
+  description="One flat monthly fee. Forj's AI answers every call, qualifies leads, and keeps your pipeline full for $199/mo."
 >
 
   <!-- Header -->
   <section class="bg-[#0A1628] text-white py-16 md:py-20 px-4">
     <div class="max-w-3xl mx-auto text-center">
-      <h1 class="text-4xl md:text-5xl font-black mb-4">Services & Pricing</h1>
-      <p class="text-white/70 text-lg">Straightforward plans. No hidden fees. Cancel anytime.</p>
+      <h1 class="text-4xl md:text-5xl font-black mb-4">Pricing</h1>
+      <p class="text-white/70 text-lg">One flat fee. No per-call charges. No hidden costs. Cancel anytime.</p>
     </div>
   </section>
 
   <!-- Plans -->
   <section class="py-20 px-4 bg-white">
     <div class="max-w-5xl mx-auto">
-      <div class="grid md:grid-cols-3 gap-8 items-start">
-        {plans.map(plan => (
-          <div class={`rounded-2xl p-8 relative ${plan.highlight ? 'border-2 border-[#2D6FE8] shadow-2xl' : plan.dark ? 'bg-[#0A1628] text-white border border-gray-200' : 'border border-gray-200'}`}>
-            {plan.highlight && (
-              <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#2D6FE8] text-white text-xs font-black px-4 py-1 rounded-full">MOST POPULAR</span>
-            )}
-            <p class={`text-sm font-semibold uppercase tracking-wider mb-2 ${plan.highlight ? 'text-[#2D6FE8]' : plan.dark ? 'text-white/50' : 'text-gray-400'}`}>{plan.name}</p>
-            <p class={`text-4xl font-black mb-1 ${plan.dark ? 'text-white' : 'text-[#0A1628]'}`}>{plan.price}<span class={`text-lg font-normal ${plan.dark ? 'text-white/50' : 'text-gray-400'}`}>/mo</span></p>
-            <p class={`text-sm mb-1 ${plan.dark ? 'text-white/40' : 'text-gray-400'}`}>+ {plan.setup} one-time setup</p>
-            <p class={`text-sm mb-7 font-medium ${plan.dark ? 'text-white/70' : 'text-gray-500'}`}>{plan.tagline}</p>
+      <div class="max-w-lg mx-auto">
+        <div class="border-2 border-[#2D6FE8] rounded-2xl p-8 relative shadow-2xl">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#2D6FE8] text-white text-xs font-black px-4 py-1 rounded-full">EVERYTHING INCLUDED</span>
+          <p class="text-sm font-semibold text-[#2D6FE8] uppercase tracking-wider mb-2">{plan.name}</p>
+          <p class="text-4xl font-black text-[#0A1628] mb-1">{plan.price}<span class="text-lg font-normal text-gray-400">/mo</span></p>
+          <p class="text-sm text-gray-400 mb-1">Flat rate — no per-call fees, ever</p>
+          <p class="text-sm font-medium text-gray-500 mb-7">{plan.tagline}</p>
 
-            <div class="mb-6">
-              <p class={`text-xs font-bold uppercase tracking-wider mb-3 ${plan.dark ? 'text-white/40' : 'text-gray-400'}`}>What's included</p>
-              <ul class="space-y-2.5">
-                {plan.features.map(f => (
-                  <li class={`flex gap-2.5 text-sm ${plan.dark ? 'text-white/80' : 'text-gray-600'}`}>
-                    <span class="text-[#2D6FE8] font-bold mt-0.5">✓</span>
-                    {f}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {plan.notIncluded && plan.notIncluded.length > 0 && (
-              <div class="mb-8">
-                <p class={`text-xs font-bold uppercase tracking-wider mb-3 ${plan.dark ? 'text-white/30' : 'text-gray-300'}`}>Not included</p>
-                <ul class="space-y-2">
-                  {plan.notIncluded.map(f => (
-                    <li class={`flex gap-2.5 text-sm ${plan.dark ? 'text-white/30' : 'text-gray-300'}`}>
-                      <span>—</span>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            <a href="/contact" class={`block text-center font-bold py-3 rounded-lg transition-colors ${plan.highlight ? 'bg-[#2D6FE8] text-white hover:bg-blue-600' : plan.dark ? 'border-2 border-white/30 text-white hover:bg-white/10' : 'border-2 border-[#0A1628] text-[#0A1628] hover:bg-[#0A1628] hover:text-white'}`}>
-              Get Started
-            </a>
+          <div class="mb-8">
+            <p class="text-xs font-bold uppercase tracking-wider mb-3 text-gray-400">What's included</p>
+            <ul class="space-y-2.5">
+              {plan.features.map(f => (
+                <li class="flex gap-2.5 text-sm text-gray-600">
+                  <span class="text-[#2D6FE8] font-bold mt-0.5">✓</span>
+                  {f}
+                </li>
+              ))}
+            </ul>
           </div>
-        ))}
+
+          <a href="/contact" class="block text-center bg-[#2D6FE8] text-white font-bold py-3 rounded-lg hover:bg-blue-600 transition-colors">
+            Get Started
+          </a>
+        </div>
       </div>
 
-      <p class="text-center text-gray-400 text-sm mt-10">All plans include a free website mockup before you commit. No credit card required.</p>
+      <p class="text-center text-gray-400 text-sm mt-10">No long-term contracts. No credit card required to get started.</p>
     </div>
   </section>
 
@@ -142,27 +75,27 @@ const plans = [
         {[
           {
             q: "Is there a long-term contract?",
-            a: "No. All plans are month-to-month. You can cancel anytime with 30 days notice. We keep clients because our work delivers results, not because we trap them in contracts."
+            a: "No. Month-to-month. Cancel anytime with 30 days notice. We keep clients because the product works, not because we lock them in."
           },
           {
-            q: "How fast can my site go live?",
-            a: "Typically 10–14 business days from the time you provide your information and approve your mockup."
+            q: "How quickly can I get set up?",
+            a: "Most clients are live within a few days. We handle the setup — configure your AI agent, tune it to your business, and connect it to your number."
           },
           {
-            q: "What do I need to provide?",
-            a: "Your business info, a logo (or we can help you get one), some photos if you have them, and answers to a short intake form. We handle everything else."
+            q: "Are there any per-call fees?",
+            a: "None. The $199/mo covers everything. No per-minute, per-call, or usage charges. You can handle as many calls as you get."
           },
           {
-            q: "Do I own my website?",
-            a: "Yes. You own your domain and all your content. If you ever cancel, you can take your site with you."
+            q: "What does the AI actually say on the call?",
+            a: "We configure a custom script for your business — your agent name, your services, the questions to qualify callers. It sounds natural, not robotic."
           },
           {
-            q: "What's included in 'Google Ads management'?",
-            a: "We set up and manage your Google Ads campaigns — keyword research, ad copy, targeting, and monthly optimization. Your ad budget is separate and paid directly to Google."
+            q: "What happens after the AI qualifies a lead?",
+            a: "You get an instant alert with the caller's name, number, what they need, and their lead score. You follow up when you're ready — everything is logged in your dashboard."
           },
           {
-            q: "Do you work with businesses outside my area?",
-            a: "Yes — we work with local service businesses anywhere. As long as you rely on customers finding you online, we can help."
+            q: "What kinds of businesses use Forj?",
+            a: "Any business that relies on inbound calls — roofers, HVAC, landscapers, plumbers, law firms, insurance brokers, and more. If the phone rings, we can help."
           }
         ].map(item => (
           <div class="bg-white rounded-xl p-6 shadow-sm">
@@ -177,10 +110,10 @@ const plans = [
   <!-- CTA -->
   <section class="bg-[#0A1628] text-white py-16 px-4">
     <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-black mb-4">Not sure which plan is right?</h2>
-      <p class="text-white/80 text-lg mb-8">Tell us about your business and we'll recommend the right fit — no pressure.</p>
+      <h2 class="text-3xl md:text-4xl font-black mb-4">Ready to stop missing leads?</h2>
+      <p class="text-white/80 text-lg mb-8">Get started today — we'll have your AI agent configured and live within days.</p>
       <a href="/contact" class="inline-block bg-[#2D6FE8] text-white font-black text-lg px-10 py-4 rounded-lg hover:bg-blue-600 hover:ring-2 hover:ring-[#2D6FE8] transition-all shadow-xl">
-        Get a Free Mockup →
+        Get Started →
       </a>
     </div>
   </section>

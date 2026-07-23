@@ -1,22 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Globe, MapPin, Star, Megaphone, BarChart2, Headphones } from 'lucide-astro';
+import { Phone, ClipboardList, Zap, BarChart2, Bell, Headphones } from 'lucide-astro';
 
 const services = [
-  { title: "Professional Website", desc: "A fast, mobile-first site built to convert visitors into calls. Custom design, not a template. Hosted and maintained for you.", Icon: Globe },
-  { title: "Google & Local SEO", desc: "We manage your Google Business Profile, local citations, and SEO so you show up when customers search for what you do.", Icon: MapPin },
-  { title: "Reviews & Reputation", desc: "Automated review requests, monitoring, and responses. More 5-star reviews means more trust and more calls.", Icon: Star },
-  { title: "Google Ads", desc: "Targeted ads that put your business in front of customers who are ready to hire right now. No wasted spend.", Icon: Megaphone },
-  { title: "Monthly Reporting", desc: "Know exactly how your online presence is performing — calls, clicks, impressions — in a clear monthly dashboard.", Icon: BarChart2 },
-  { title: "Real Support", desc: "A real person who knows your business. Not a ticket queue. Fast responses, no runaround.", Icon: Headphones },
+  { title: "AI Answers Every Call", desc: "Your AI agent picks up every call — 24/7, no voicemail, no missed opportunities. Callers get a real conversation, not a robot menu.", Icon: Phone },
+  { title: "Instant Lead Qualification", desc: "The AI asks the right questions and scores every caller in real time. You know who's serious before you ever call them back.", Icon: ClipboardList },
+  { title: "Instant Alerts", desc: "Hot leads trigger an instant notification with the caller's name, number, what they need, and their score. You're first to follow up.", Icon: Zap },
+  { title: "Lead Dashboard", desc: "Every call logged, scored, and organized. Filter by status, see transcripts, track your pipeline — all in one place.", Icon: BarChart2 },
+  { title: "Monthly Reporting", desc: "Know exactly how many calls came in, how many qualified, and how fast your team followed up. Real numbers, not guesses.", Icon: Bell },
+  { title: "Fully Managed Setup", desc: "We configure your AI agent, tune it to your business, and keep it running. You just answer the good leads.", Icon: Headphones },
 ];
 
-const industries = ["Roofers","HVAC","Landscapers","Plumbers","Electricians","Movers","Painters","Cleaners","Contractors","Restaurants","Auto Repair","Pest Control","Tree Services","Pressure Washing","Concrete & Masonry","Insurance Brokers","Mortgage Brokers","Independent Financial Advisors"];
+const industries = ["Roofers","HVAC","Landscapers","Plumbers","Electricians","Movers","Painters","Cleaners","Contractors","Auto Repair","Pest Control","Tree Services","Pressure Washing","Concrete & Masonry","Insurance Brokers","Mortgage Brokers","Independent Financial Advisors","Law Firms"];
 ---
 
 <Layout
-  title="Forj — More Calls. More Customers. Less Hassle."
-  description="Forj builds and manages your entire online presence so local businesses get found, get called, and keep growing."
+  title="Forj — AI That Answers Your Calls"
+  description="Forj's AI answers every call, qualifies leads instantly, and alerts you when a hot prospect is ready. Never miss a customer again."
 >
 
   <!-- Hero -->
@@ -27,17 +27,17 @@ const industries = ["Roofers","HVAC","Landscapers","Plumbers","Electricians","Mo
         <!-- Left: Text -->
         <div class="md:w-1/2 pb-12 md:pb-20">
           <div class="inline-block bg-[#2D6FE8]/20 text-[#2D6FE8] text-sm font-semibold px-4 py-1.5 rounded-full mb-8 border border-[#2D6FE8]/30">
-            Done-for-You Online Presence
+            AI Call Answering for Local Businesses
           </div>
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
-            More Calls.<br />More Customers.<br /><span class="text-[#2D6FE8]">Less Hassle.</span>
+            Never Miss<br />a Qualified<br /><span class="text-[#2D6FE8]">Lead Again.</span>
           </h1>
           <p class="text-white/70 text-lg md:text-xl mb-10 leading-relaxed">
-            Forj builds and manages your entire online presence so local businesses get found, get called, and keep growing. You focus on the work. We handle everything else.
+            Forj's AI answers every call, qualifies the lead in real time, and alerts you instantly when a hot prospect is ready. You close the deal. We handle everything else.
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
             <a href="/contact" class="bg-[#2D6FE8] text-white font-black text-lg px-8 py-4 rounded-lg hover:bg-blue-600 hover:ring-2 hover:ring-[#2D6FE8] transition-all shadow-xl text-center">
-              Get a Free Mockup →
+              Get Started →
             </a>
             <a href="/services" class="border border-white/30 text-white font-semibold text-lg px-8 py-4 rounded-lg hover:bg-white/10 transition-colors text-center">
               See Pricing
@@ -112,10 +112,10 @@ const industries = ["Roofers","HVAC","Landscapers","Plumbers","Electricians","Mo
   <!-- Social proof bar -->
   <section class="bg-white border-b border-gray-100 py-6 px-4">
     <div class="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 md:gap-10 text-sm text-gray-500 font-medium">
-      <span>✓ No long-term contracts</span>
-      <span>✓ Done-for-you setup</span>
-      <span>✓ Live in 2 weeks</span>
-      <span>✓ Dedicated account manager</span>
+      <span>✓ Answers calls 24/7</span>
+      <span>✓ No per-call fees</span>
+      <span>✓ Live in days, not weeks</span>
+      <span>✓ Full lead dashboard</span>
       <span>✓ Cancel anytime</span>
     </div>
   </section>
@@ -124,8 +124,8 @@ const industries = ["Roofers","HVAC","Landscapers","Plumbers","Electricians","Mo
   <section class="py-20 px-4 bg-white">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-14">
-        <h2 class="text-3xl md:text-4xl font-black text-[#0A1628] mb-4">Your Entire Online Presence. Handled.</h2>
-        <p class="text-gray-500 text-lg max-w-xl mx-auto">One team. One monthly fee. Everything you need to get found online and turn clicks into calls.</p>
+        <h2 class="text-3xl md:text-4xl font-black text-[#0A1628] mb-4">Everything You Need. Nothing You Don't.</h2>
+        <p class="text-gray-500 text-lg max-w-xl mx-auto">One flat monthly fee. Your AI agent answers every call, qualifies every lead, and keeps your pipeline full.</p>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
         {services.map(item => (
@@ -145,8 +145,8 @@ const industries = ["Roofers","HVAC","Landscapers","Plumbers","Electricians","Mo
   <section class="py-20 px-4 bg-gray-50">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-14">
-        <h2 class="text-3xl md:text-4xl font-black text-[#0A1628] mb-4">Built for Local Service Businesses</h2>
-        <p class="text-gray-500 text-lg">If customers need to find you to hire you, Forj is for you.</p>
+        <h2 class="text-3xl md:text-4xl font-black text-[#0A1628] mb-4">Built for Any Business That Runs on Inbound Calls</h2>
+        <p class="text-gray-500 text-lg">If the phone rings and you need to follow up fast, Forj is for you.</p>
       </div>
       <div class="flex flex-wrap justify-center gap-3">
         {industries.map(biz => (
@@ -163,54 +163,27 @@ const industries = ["Roofers","HVAC","Landscapers","Plumbers","Electricians","Mo
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-14">
         <h2 class="text-3xl md:text-4xl font-black text-[#0A1628] mb-4">Simple, Transparent Pricing</h2>
-        <p class="text-gray-500 text-lg">No surprises. No nickel-and-diming. Everything included.</p>
+        <p class="text-gray-500 text-lg">One flat fee. No per-call charges. No surprises.</p>
       </div>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="border border-gray-200 rounded-2xl p-8">
-          <p class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">Starter</p>
-          <p class="text-4xl font-black text-[#0A1628] mb-1">$179<span class="text-lg font-normal text-gray-400">/mo</span></p>
-          <p class="text-sm text-gray-400 mb-6">+ $500 setup</p>
-          <ul class="space-y-3 text-gray-600 text-sm mb-8">
-            <li class="flex gap-2"><span class="text-[#2D6FE8] font-bold">✓</span> Custom website</li>
-            <li class="flex gap-2"><span class="text-[#2D6FE8] font-bold">✓</span> Hosting & maintenance</li>
-            <li class="flex gap-2"><span class="text-[#2D6FE8] font-bold">✓</span> Basic SEO</li>
-            <li class="flex gap-2"><span class="text-[#2D6FE8] font-bold">✓</span> SSL & security</li>
-          </ul>
-          <a href="/contact" class="block text-center border-2 border-[#0A1628] text-[#0A1628] font-bold py-3 rounded-lg hover:bg-[#0A1628] hover:text-white transition-colors">
-            Get Started
-          </a>
-        </div>
+      <div class="max-w-md mx-auto">
         <div class="border-2 border-[#2D6FE8] rounded-2xl p-8 relative shadow-xl">
-          <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#2D6FE8] text-white text-xs font-black px-4 py-1 rounded-full">MOST POPULAR</span>
-          <p class="text-sm font-semibold text-[#2D6FE8] uppercase tracking-wider mb-2">Growth</p>
-          <p class="text-4xl font-black text-[#0A1628] mb-1">$399<span class="text-lg font-normal text-gray-400">/mo</span></p>
-          <p class="text-sm text-gray-400 mb-6">+ $750 setup</p>
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#2D6FE8] text-white text-xs font-black px-4 py-1 rounded-full">EVERYTHING INCLUDED</span>
+          <p class="text-sm font-semibold text-[#2D6FE8] uppercase tracking-wider mb-2">Full Access</p>
+          <p class="text-4xl font-black text-[#0A1628] mb-1">$199<span class="text-lg font-normal text-gray-400">/mo</span></p>
+          <p class="text-sm text-gray-400 mb-6">Flat rate — no per-call fees, ever</p>
           <ul class="space-y-3 text-gray-600 text-sm mb-8">
-            <li class="flex gap-2"><span class="text-[#2D6FE8] font-bold">✓</span> Everything in Starter</li>
-            <li class="flex gap-2"><span class="text-[#2D6FE8] font-bold">✓</span> Google Business Profile</li>
-            <li class="flex gap-2"><span class="text-[#2D6FE8] font-bold">✓</span> Local SEO</li>
-            <li class="flex gap-2"><span class="text-[#2D6FE8] font-bold">✓</span> Review management</li>
+            <li class="flex gap-2"><span class="text-[#2D6FE8] font-bold">✓</span> AI answers every call, 24/7</li>
+            <li class="flex gap-2"><span class="text-[#2D6FE8] font-bold">✓</span> Real-time lead scoring</li>
+            <li class="flex gap-2"><span class="text-[#2D6FE8] font-bold">✓</span> Instant hot-lead alerts</li>
+            <li class="flex gap-2"><span class="text-[#2D6FE8] font-bold">✓</span> Full lead dashboard & transcripts</li>
+            <li class="flex gap-2"><span class="text-[#2D6FE8] font-bold">✓</span> Monthly performance reports</li>
           </ul>
           <a href="/contact" class="block text-center bg-[#2D6FE8] text-white font-bold py-3 rounded-lg hover:bg-blue-600 transition-colors">
             Get Started
           </a>
         </div>
-        <div class="border border-gray-200 rounded-2xl p-8 bg-[#0A1628] text-white">
-          <p class="text-sm font-semibold text-white/50 uppercase tracking-wider mb-2">Pro</p>
-          <p class="text-4xl font-black mb-1">$799<span class="text-lg font-normal text-white/50">/mo</span></p>
-          <p class="text-sm text-white/40 mb-6">+ $1,000 setup</p>
-          <ul class="space-y-3 text-white/80 text-sm mb-8">
-            <li class="flex gap-2"><span class="text-[#2D6FE8] font-bold">✓</span> Everything in Growth</li>
-            <li class="flex gap-2"><span class="text-[#2D6FE8] font-bold">✓</span> Google Ads management</li>
-            <li class="flex gap-2"><span class="text-[#2D6FE8] font-bold">✓</span> Review automation</li>
-            <li class="flex gap-2"><span class="text-[#2D6FE8] font-bold">✓</span> Monthly dashboard</li>
-          </ul>
-          <a href="/contact" class="block text-center border-2 border-white/30 text-white font-bold py-3 rounded-lg hover:bg-white/10 transition-colors">
-            Get Started
-          </a>
-        </div>
       </div>
-      <p class="text-center text-gray-400 text-sm mt-8">All plans include a free mockup before you commit. <a href="/services" class="text-[#2D6FE8] font-semibold hover:underline">Full plan details →</a></p>
+      <p class="text-center text-gray-400 text-sm mt-8">No long-term contracts. Cancel anytime. <a href="/services" class="text-[#2D6FE8] font-semibold hover:underline">Full plan details →</a></p>
     </div>
   </section>
 
