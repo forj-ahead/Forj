@@ -6,7 +6,7 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "Forj builds and manages your entire online presence so local businesses get found, get called, and keep growing." } = Astro.props;
+const { title, description = "Forj answers your business calls with AI — qualifying leads, scoring callers, and notifying you instantly. Never miss a sale again." } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://forjahead.com');
 ---
 
@@ -116,54 +116,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://forjahea
     const toggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('mobile-menu');
     toggle?.addEventListener('click', () => menu?.classList.toggle('hidden'));
-
-    // Formspree form submission
-    // Sign up at formspree.io, create a form pointed at james@forjahead.com,
-    // then replace PASTE_YOUR_FORMSPREE_ID below with the form ID (e.g. xpwzabcd)
-    const FORMSPREE_ID = 'PASTE_YOUR_FORMSPREE_ID';
-    const FORMSPREE_URL = `https://formspree.io/f/${FORMSPREE_ID}`;
-
-    async function submitForm(form: HTMLFormElement, statusEl: HTMLElement) {
-      const data = new FormData(form);
-      statusEl.textContent = 'Sending…';
-      statusEl.className = 'text-center text-sm text-white/40';
-
-      try {
-        const res = await fetch(FORMSPREE_URL, {
-          method: 'POST',
-          body: data,
-          headers: { Accept: 'application/json' },
-        });
-
-        if (res.ok) {
-          form.reset();
-          statusEl.textContent = "✓ Got it! We'll be in touch within 1 business day.";
-          statusEl.classList.add('text-green-400');
-          setTimeout(() => { window.location.href = '/thank-you'; }, 1200);
-        } else {
-          throw new Error('Form submission failed');
-        }
-      } catch {
-        statusEl.textContent = 'Something went wrong — please email james@forjahead.com directly.';
-        statusEl.classList.add('text-red-400');
-      }
-    }
-
-    // Layout footer form
-    const layoutForm = document.getElementById('layout-contact-form') as HTMLFormElement | null;
-    const layoutStatus = document.getElementById('lf-status') as HTMLElement | null;
-    layoutForm?.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      if (layoutStatus) await submitForm(layoutForm, layoutStatus);
-    });
-
-    // Contact page form (if present)
-    const contactForm = document.getElementById('main-contact-form') as HTMLFormElement | null;
-    const contactStatus = document.getElementById('cf-status') as HTMLElement | null;
-    contactForm?.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      if (contactStatus) await submitForm(contactForm, contactStatus);
-    });
   </script>
 </body>
 </html>
