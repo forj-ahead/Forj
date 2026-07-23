@@ -67,16 +67,16 @@ const industries = ["Roofers","HVAC","Landscapers","Plumbers","Electricians","Mo
                 <div class="flex gap-3 text-white/30 text-xs">
                   <span class="text-white/60">Leads</span><span>Calls</span><span>Reports</span>
                 </div>
-                <div class="w-2 h-2 rounded-full bg-blue-400"></div>
+                <div id="alert-dot" style="width:8px;height:8px;border-radius:50%;background:#60a5fa;opacity:0;transition:opacity 0.3s;"></div>
               </div>
               <!-- Stats row -->
               <div class="grid grid-cols-3 gap-2 px-4 pt-3 pb-2">
                 <div class="bg-[#111827] rounded-lg p-2.5 text-center">
-                  <div class="text-white font-black text-lg leading-none">12</div>
+                  <div id="stat-calls" class="text-white font-black text-lg leading-none">12</div>
                   <div class="text-white/30 text-[10px] mt-0.5">calls today</div>
                 </div>
                 <div class="bg-[#111827] rounded-lg p-2.5 text-center">
-                  <div class="text-green-400 font-black text-lg leading-none">8</div>
+                  <div id="stat-qualified" class="text-green-400 font-black text-lg leading-none">8</div>
                   <div class="text-white/30 text-[10px] mt-0.5">qualified</div>
                 </div>
                 <div class="bg-[#111827] rounded-lg p-2.5 text-center">
@@ -101,10 +101,10 @@ const industries = ["Roofers","HVAC","Landscapers","Plumbers","Electricians","Mo
                   </div>
                   <div class="bg-green-500/20 text-green-400 text-[10px] font-black px-2 py-0.5 rounded-full">8</div>
                 </div>
-                <div class="bg-[#1a2a44] border border-blue-500/40 rounded-lg px-3 py-2 flex items-center justify-between">
+                <div id="new-lead" style="opacity:0;transform:translateY(8px);transition:opacity 0.5s,transform 0.5s;" class="bg-[#1a2a44] border border-blue-500/40 rounded-lg px-3 py-2 flex items-center justify-between">
                   <div>
                     <div class="text-white text-xs font-semibold">David L. · Plumbing emergency</div>
-                    <div class="text-blue-400 text-[10px] font-semibold">Just now · Hot lead</div>
+                    <div class="text-blue-400 text-[10px] font-semibold">Just now · 🔥 Hot lead</div>
                   </div>
                   <div class="bg-green-500/30 text-green-300 text-[10px] font-black px-2 py-0.5 rounded-full">10</div>
                 </div>
@@ -198,4 +198,6 @@ const industries = ["Roofers","HVAC","Landscapers","Plumbers","Electricians","Mo
   </section>
 
 
+
+<script src="/dashboard-demo.js" defer></script>
 </Layout>
