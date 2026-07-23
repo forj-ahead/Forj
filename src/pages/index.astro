@@ -124,51 +124,6 @@ const industries = ["Roofers","HVAC","Landscapers","Plumbers","Electricians","Mo
           </div>
         </div>
 
-        <style>
-          @keyframes pulse-dot {
-            0%, 100% { opacity: 0; }
-            50% { opacity: 1; }
-          }
-          #alert-dot.active {
-            animation: pulse-dot 1s ease-in-out infinite;
-          }
-          #new-lead.visible {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-          }
-        </style>
-        <script>
-          (function() {
-            function runAnimation() {
-              var dot = document.getElementById('alert-dot');
-              var newLead = document.getElementById('new-lead');
-              var statCalls = document.getElementById('stat-calls');
-              var statQualified = document.getElementById('stat-qualified');
-              if (!dot || !newLead) return;
-
-              // After 2.5s, show the new lead sliding in
-              setTimeout(function() {
-                dot.classList.add('active');
-                newLead.classList.add('visible');
-                if (statCalls) statCalls.textContent = '13';
-                if (statQualified) statQualified.textContent = '8';
-              }, 2500);
-
-              // After 6s, fade it back out and reset
-              setTimeout(function() {
-                dot.classList.remove('active');
-                newLead.classList.remove('visible');
-                if (statCalls) statCalls.textContent = '12';
-                if (statQualified) statQualified.textContent = '7';
-                // Loop
-                setTimeout(runAnimation, 1500);
-              }, 6000);
-            }
-            // Start after initial page load settles
-            setTimeout(runAnimation, 1000);
-          })();
-        </script>
-
       </div>
     </div>
   </section>
@@ -252,4 +207,44 @@ const industries = ["Roofers","HVAC","Landscapers","Plumbers","Electricians","Mo
   </section>
 
 
+
+<style>
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+  #alert-dot.active {
+    animation: pulse-dot 1s ease-in-out infinite;
+  }
+  #new-lead.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+</style>
+
+<script is:inline>
+  (function() {
+    function runAnimation() {
+      var dot = document.getElementById('alert-dot');
+      var newLead = document.getElementById('new-lead');
+      var statCalls = document.getElementById('stat-calls');
+      var statQualified = document.getElementById('stat-qualified');
+      if (!dot || !newLead) return;
+      setTimeout(function() {
+        dot.classList.add('active');
+        newLead.classList.add('visible');
+        if (statCalls) statCalls.textContent = '13';
+        if (statQualified) statQualified.textContent = '8';
+      }, 2500);
+      setTimeout(function() {
+        dot.classList.remove('active');
+        newLead.classList.remove('visible');
+        if (statCalls) statCalls.textContent = '12';
+        if (statQualified) statQualified.textContent = '7';
+        setTimeout(runAnimation, 1500);
+      }, 6000);
+    }
+    setTimeout(runAnimation, 1000);
+  })();
+</script>
 </Layout>
